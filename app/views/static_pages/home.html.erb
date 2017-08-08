@@ -1,5 +1,34 @@
-<h1>Destiny PvP Tracker Ruby app</h1>
+<h1>Destiny PvP Tracker - Ruby Edition</h1>
 <p>
     This is the home page for the tracker app. <br/>
     This will prompt the user to input destiny player names to look up and compare PvP stats
+
+    <!-- Below was lifted from a different source. This is more or less a placeholder for now -->
+    <hr>
+    <div class="search-box">
+        <span style="font-size:20px;">Search PvP Stats</span>
+        <div class="player-search">
+            <form action="/searchUser" method="post">
+                <input type="text" placeholder="Username" name="displayName" required>
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                    Search
+                </button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="search-box">
+        <span style="font-size:20px;">Compare PvP Stats</span>
+        <div class="player-search">
+            <form action="/searchUser" method="post">
+                <input type="text" placeholder="Username" name="displayName" required>
+                <input type="text" placeholder="Username2" name="displayName2" required>
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                    Search
+                </button>
+            </form>
+        </div>
+    </div>
 </p>
