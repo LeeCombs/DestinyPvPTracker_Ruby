@@ -9,6 +9,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <!-- Message that displays after a page redirect (ie. signup)-->
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+
+      <!-- Main body -->
+      <%= yield %>
+
+      <!-- Footer & Debug -->
+      <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
   </body>
 </html>
