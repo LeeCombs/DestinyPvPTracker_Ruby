@@ -113,3 +113,55 @@ footer {
   @include box_sizing;
 }
 
+/* Stat Comparison */
+
+.compare-container {
+  background-color: aliceblue;
+    
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.player-header-container {
+  background-color: deepskyblue;
+    
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: space-between;
+}
+
+.player-card-header {
+  background-color: lightblue;
+}
+
+.compare-column-header {
+  background-color: sandybrown;
+}
+
+.stat-card-container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+.stat-card-row {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: space-between;
+}
+
+.stat-card {
+  background-color: greenyellow;
+}
+
+.stat-compare-column {
+  background-color: lightyellow;
+}
+
