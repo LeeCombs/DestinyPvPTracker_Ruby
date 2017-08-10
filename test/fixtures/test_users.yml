@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  scout: 1
+  handcannon: 1
+  pulse: 1
+  auto: 1
+
+two:
+  id: MyString
+  scout: 1
+  handcannon: 1
+  pulse: 1
+  auto: 1
