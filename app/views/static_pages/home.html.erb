@@ -5,6 +5,21 @@
 
     <!-- Below was lifted from a different source. This is more or less a placeholder for now -->
     <hr>
+    
+    Compare Players <br/>
+    
+    <%= form_tag("/compare", method: "get") do %>
+        <%= label_tag(:player1, "Player 1:") %>
+        <%= text_field_tag(:player1) %>
+        <br/>
+        <%= label_tag(:player2, "Player 2:") %>
+        <%= text_field_tag(:player2) %>
+        <br/>
+        <%= submit_tag("Search") %>
+    <% end %>
+
+    <hr>
+
     <div class="search-box">
         <span style="font-size:20px;">Search PvP Stats</span>
         <div class="player-search">
