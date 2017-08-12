@@ -28,6 +28,8 @@
         <hr>
         <div class="stat-card-row">
             <!-- Player 1 stat card -->
+            <%= render 'stats', user: @user1 %>
+            <!--
             <div class="stat-card">
                 <div class="stat-card-header">Primary Weapon Kills</div>
                 <div class="stat-card-stat">Scout Rifle : <%= @user1.scout %></div>
@@ -35,6 +37,7 @@
                 <div class="stat-card-stat">Hand Cannon : <%= @user1.hand %></div>
                 <div class="stat-card-stat">Auto Rifle  : <%= @user1.auto %></div>
             </div>
+            -->
             <!-- Comparison column -->
             <div class="stat-compare-column">
                 <br/>
@@ -44,6 +47,8 @@
                 <div class='compare-stat'><%= @user1.auto %> - <%= @user2.auto %></div>
             </div>
             <!-- Player 2 stat card -->
+            <%= render 'stats', user: @user2 %>
+            <!--
             <div class="stat-card">
                 <div class="stat-card-header">Primary Weapon Kills</div>
                 <div class="stat-card-stat">Scout Rifle : <%= @user2.scout %></div>
@@ -51,6 +56,7 @@
                 <div class="stat-card-stat">Hand Cannon : <%= @user2.hand %></div>
                 <div class="stat-card-stat">Auto Rifle  : <%= @user2.auto %></div>
             </div>
+            -->
         </div>
 
         <!-- Secondary Weapon row -->
