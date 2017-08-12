@@ -4,15 +4,11 @@
     This page will compare the PvP stats of two destiny accounts/characters
 </p>
 <div class="compare-container">
-    <div>
-        <p>ID: <%= @user1.user_id %></p>
-        <p>ID: <%= @user2.user_id %></p>
-    </div>
     <!-- Headers -->
     <div class="player-header-container">
         <!-- Player 1 header -->
         <div class="player-card-header">
-            Player 1 Header
+            Player 1 Header ID: <%= @user1.user_id %>
         </div>
         <!-- Comparison column header -->
         <div class="compare-column-header">
@@ -20,7 +16,7 @@
         </div>
         <!-- Player 2 header -->
         <div class="player-card-header">
-            Player 2 Header
+            Player 2 Header ID: <%= @user2.user_id %>
         </div>
     </div>
 
@@ -34,26 +30,26 @@
             <!-- Player 1 stat card -->
             <div class="stat-card">
                 <div class="stat-card-header">Primary Weapon Kills</div>
-                <div class="stat-card-stat">Scout Rifle : 130</div>
-                <div class="stat-card-stat">Pulse Rifle : 120</div>
-                <div class="stat-card-stat">Hand Cannon : 110</div>
-                <div class="stat-card-stat">Auto Rifle  : 100</div>
+                <div class="stat-card-stat">Scout Rifle : <%= @user1.scout %></div>
+                <div class="stat-card-stat">Pulse Rifle : <%= @user1.pulse %></div>
+                <div class="stat-card-stat">Hand Cannon : <%= @user1.hand %></div>
+                <div class="stat-card-stat">Auto Rifle  : <%= @user1.auto %></div>
             </div>
             <!-- Comparison column -->
             <div class="stat-compare-column">
                 <br/>
-                <div class='compare-stat'>130 - 50</div>
-                <div class='compare-stat'>120 - 60</div>
-                <div class='compare-stat'>110 - 70</div>
-                <div class='compare-stat'>100 - 80</div>
+                <div class='compare-stat'><%= @user1.scout %> - <%= @user2.scout %></div>
+                <div class='compare-stat'><%= @user1.pulse %> - <%= @user2.pulse %></div>
+                <div class='compare-stat'><%= @user1.hand %> - <%= @user2.hand %></div>
+                <div class='compare-stat'><%= @user1.auto %> - <%= @user2.auto %></div>
             </div>
             <!-- Player 2 stat card -->
             <div class="stat-card">
                 <div class="stat-card-header">Primary Weapon Kills</div>
-                <div class="stat-card-stat">Scout Rifle : 50</div>
-                <div class="stat-card-stat">Pulse Rifle : 60</div>
-                <div class="stat-card-stat">Hand Cannon : 70</div>
-                <div class="stat-card-stat">Auto Rifle  : 80</div>
+                <div class="stat-card-stat">Scout Rifle : <%= @user2.scout %></div>
+                <div class="stat-card-stat">Pulse Rifle : <%= @user2.pulse %></div>
+                <div class="stat-card-stat">Hand Cannon : <%= @user2.hand %></div>
+                <div class="stat-card-stat">Auto Rifle  : <%= @user2.auto %></div>
             </div>
         </div>
 
