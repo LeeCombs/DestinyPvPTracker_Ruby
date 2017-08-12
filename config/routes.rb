@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get '/about',   to: 'static_pages#about'
   get '/compare', to: 'compare#index'
 
-  resources :test_users
+  resources :characters
 end
