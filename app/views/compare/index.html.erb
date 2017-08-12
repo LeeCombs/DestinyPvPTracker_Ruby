@@ -27,65 +27,13 @@
         <!-- Primary Weapon row -->
         <hr>
         <div class="stat-card-row">
-            <!-- Player 1 stat card -->
-            <%= render 'stats', user: @user1 %>
-            <!--
-            <div class="stat-card">
-                <div class="stat-card-header">Primary Weapon Kills</div>
-                <div class="stat-card-stat">Scout Rifle : <%= @user1.scout %></div>
-                <div class="stat-card-stat">Pulse Rifle : <%= @user1.pulse %></div>
-                <div class="stat-card-stat">Hand Cannon : <%= @user1.hand %></div>
-                <div class="stat-card-stat">Auto Rifle  : <%= @user1.auto %></div>
-            </div>
-            -->
-            <!-- Comparison column -->
-            <div class="stat-compare-column">
-                <br/>
-                <div class='compare-stat'><%= @user1.scout %> - <%= @user2.scout %></div>
-                <div class='compare-stat'><%= @user1.pulse %> - <%= @user2.pulse %></div>
-                <div class='compare-stat'><%= @user1.hand %> - <%= @user2.hand %></div>
-                <div class='compare-stat'><%= @user1.auto %> - <%= @user2.auto %></div>
-            </div>
-            <!-- Player 2 stat card -->
-            <%= render 'stats', user: @user2 %>
-            <!--
-            <div class="stat-card">
-                <div class="stat-card-header">Primary Weapon Kills</div>
-                <div class="stat-card-stat">Scout Rifle : <%= @user2.scout %></div>
-                <div class="stat-card-stat">Pulse Rifle : <%= @user2.pulse %></div>
-                <div class="stat-card-stat">Hand Cannon : <%= @user2.hand %></div>
-                <div class="stat-card-stat">Auto Rifle  : <%= @user2.auto %></div>
-            </div>
-            -->
+            <%= render partial: 'primary_stat_card', locals: { user1: @user1, user2: @user2 } %>
         </div>
 
-        <!-- Secondary Weapon row -->
+        <!-- Special Weapon row -->
         <hr>
         <div class="stat-card-row">
-            <!-- Player 1 stat card -->
-            <div class="stat-card">
-                <div class="stat-card-header">Secondary Weapon Kills</div>
-                <div class="stat-card-stat">Sniper Rifle : 130</div>
-                <div class="stat-card-stat">Fusion Rifle : 120</div>
-                <div class="stat-card-stat">Shotgun :      110</div>
-                <div class="stat-card-stat">Side Arm :     100</div>
-            </div>
-            <!-- Comparison column -->
-            <div class="stat-compare-column">
-                <br/>
-                <div class='compare-stat'>130 - 30</div>
-                <div class='compare-stat'>120 - 20</div>
-                <div class='compare-stat'>110 - 10</div>
-                <div class='compare-stat'>100 - 0</div>
-            </div>
-            <!-- Player 2 stat card -->
-            <div class="stat-card">
-                <div class="stat-card-header">Secondary Weapon Kills</div>
-                <div class="stat-card-stat">Sniper Rifle : 30</div>
-                <div class="stat-card-stat">Fusion Rifle : 20</div>
-                <div class="stat-card-stat">Shotgun :      10</div>
-                <div class="stat-card-stat">Side Arm :     0</div>
-            </div>
+            <%= render partial: 'special_stat_card', locals: { user1: @user1, user2: @user2 } %>
         </div>
 
     </div>
