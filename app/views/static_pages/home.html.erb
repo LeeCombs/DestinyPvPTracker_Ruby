@@ -7,6 +7,14 @@
     <hr>
     
     Compare Players <br/>
+    <br/>
+    <strong>
+        Note: <br/>
+        Use only 1 and 2, 2 and 1, 1 and 1, or 2 and 2 <br/>
+        Nothing else is supported, and will break the app for the moment
+    </strong>
+    <br/>
+    <br/>
 
     <%= form_tag("/compare", method: "get") do |f| %>
         <%= label_tag :player1, "Player 1:" %>
@@ -21,7 +29,7 @@
     <hr>
 
     <div class="search-box">
-        <span style="font-size:20px;">Search PvP Stats</span>
+        <span style="font-size:20px;">Search PvP Stats (pending)</span>
         <div class="player-search">
             <form action="/searchUser" method="post">
                 <input type="text" placeholder="Username" name="displayName" required>
@@ -34,7 +42,7 @@
     </div>
     <hr>
     <div class="search-box">
-        <span style="font-size:20px;">Compare PvP Stats</span>
+        <span style="font-size:20px;">Compare PvP Stats (pending)</span>
         <div class="player-search">
             <form action="/searchUser" method="post">
                 <input type="text" placeholder="Username" name="displayName" required>
