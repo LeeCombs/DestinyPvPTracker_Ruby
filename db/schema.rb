@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170812204758) do
+ActiveRecord::Schema.define(version: 20170812205703) do
 
   create_table "test_users", force: :cascade do |t|
     t.string   "user_id"
-    t.integer  "scout"
-    t.integer  "hand"
-    t.integer  "pulse"
-    t.integer  "auto"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "sniper"
-    t.integer  "shotgun"
-    t.integer  "fusion"
-    t.integer  "sidearm"
+    t.integer  "scout",      default: 0
+    t.integer  "hand",       default: 0
+    t.integer  "pulse",      default: 0
+    t.integer  "auto",       default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "sniper",     default: 0
+    t.integer  "shotgun",    default: 0
+    t.integer  "fusion",     default: 0
+    t.integer  "sidearm",    default: 0
   end
 
 end
