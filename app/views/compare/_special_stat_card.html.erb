@@ -8,11 +8,19 @@
 </div>
 <!-- Comparison column -->
 <div class="stat-compare-column">
-    <br/>
-    <div class='compare-stat'><%= user1.sniper %> - <%= user2.sniper %></div>
-    <div class='compare-stat'><%= user1.shotgun %> - <%= user2.shotgun %></div>
-    <div class='compare-stat'><%= user1.fusion %> - <%= user2.fusion %></div>
-    <div class='compare-stat'><%= user1.sidearm %> - <%= user2.sidearm %></div>
+    <br/> <!-- This is here to maintain spacing for now -->
+    <div class='compare-stat'>
+        <%= render partial: 'compare_stat', locals: { stat1: user1.sniper, stat2: user2.sniper } %>
+    </div>
+    <div class='compare-stat'>
+        <%= render partial: 'compare_stat', locals: { stat1: user1.shotgun, stat2: user2.shotgun } %>
+    </div>
+    <div class='compare-stat'>
+        <%= render partial: 'compare_stat', locals: { stat1: user1.fusion, stat2: user2.fusion } %>
+    </div>
+    <div class='compare-stat'>
+        <%= render partial: 'compare_stat', locals: { stat1: user1.sidearm, stat2: user2.sidearm } %>
+    </div>
 </div>
 <!-- Player 2 stat card -->
 <div class="stat-card">

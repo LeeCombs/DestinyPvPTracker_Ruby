@@ -8,19 +8,19 @@
 </div>
 <!-- Comparison column -->
 <div class="stat-compare-column">
-    <br/>
+    <br/> <!-- This is here to maintain spacing for now -->
     <div class='compare-stat'>
-        <% if user1.scout > user2.scout %>
-            <-- <%= user1.scout - user2.scout %>
-        <% elsif user1.scout < user2.scout %>
-            <%= user2.scout - user1.scout %> -->
-        <% else %>
-            ===
-        <% end %>
+        <%= render partial: 'compare_stat', locals: { stat1: user1.scout, stat2: user2.scout } %>
     </div>
-    <div class='compare-stat'><%= user1.pulse %> - <%= user2.pulse %></div>
-    <div class='compare-stat'><%= user1.hand %> - <%= user2.hand %></div>
-    <div class='compare-stat'><%= user1.auto %> - <%= user2.auto %></div>
+    <div class='compare-stat'>
+        <%= render partial: 'compare_stat', locals: { stat1: user1.pulse, stat2: user2.pulse } %>
+    </div>
+    <div class='compare-stat'>
+        <%= render partial: 'compare_stat', locals: { stat1: user1.hand, stat2: user2.hand } %>
+    </div>
+    <div class='compare-stat'>
+        <%= render partial: 'compare_stat', locals: { stat1: user1.auto, stat2: user2.auto } %>
+    </div>
 </div>
 <!-- Player 2 stat card -->
 <div class="stat-card">
