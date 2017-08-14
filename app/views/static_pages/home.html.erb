@@ -5,53 +5,31 @@
 
     <!-- Below was lifted from a different source. This is more or less a placeholder for now -->
     <hr>
-    
-    Compare Players <br/>
-    <br/>
-    <strong>
-        Note: <br/>
-        Use only 1 and 2, 2 and 1, 1 and 1, or 2 and 2 <br/>
-        Nothing else is supported, and will break the app for the moment
-    </strong>
-    <br/>
-    <br/>
-
-    <%= form_tag("/compare", method: "get") do |f| %>
-        <%= label_tag :player1, "Player 1:" %>
-        <%= text_field_tag :player1 %>
-        <br/>
-        <%= label_tag :player2, "Player 2:"  %>
-        <%= text_field_tag :player2  %>
-        <br/>
-        <%= submit_tag "Search" %>
-    <% end %>
-
-    <hr>
 
     <div class="search-box">
-        <span style="font-size:20px;">Search PvP Stats (pending)</span>
+        <span style="font-size:20px;">Search PvP Stats</span>
         <div class="player-search">
-            <form action="/searchUser" method="post">
-                <input type="text" placeholder="Username" name="displayName" required>
-                <button type="submit">
-                    <i class="fa fa-search"></i>
-                    Search
-                </button>
-            </form>
+            <%= form_tag("/character", method: "get") do |f| %>
+                <%= label_tag :id, "Player:" %>
+                <%= text_field_tag :id %>
+                <br/>
+                <%= submit_tag "Search" %>
+            <% end %>
         </div>
     </div>
     <hr>
     <div class="search-box">
-        <span style="font-size:20px;">Compare PvP Stats (pending)</span>
+        <span style="font-size:20px;">Compare PvP Stats</span>
         <div class="player-search">
-            <form action="/searchUser" method="post">
-                <input type="text" placeholder="Username" name="displayName" required>
-                <input type="text" placeholder="Username2" name="displayName2" required>
-                <button type="submit">
-                    <i class="fa fa-search"></i>
-                    Search
-                </button>
-            </form>
+            <%= form_tag("/compare", method: "get") do |f| %>
+                <%= label_tag :player1, "Player 1:" %>
+                <%= text_field_tag :player1 %>
+                <br/>
+                <%= label_tag :player2, "Player 2:"  %>
+                <%= text_field_tag :player2  %>
+                <br/>
+                <%= submit_tag "Search" %>
+            <% end %>
         </div>
     </div>
 </p>
