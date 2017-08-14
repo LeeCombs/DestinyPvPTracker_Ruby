@@ -9,7 +9,15 @@
 <!-- Comparison column -->
 <div class="stat-compare-column">
     <br/>
-    <div class='compare-stat'><%= user1.scout %> - <%= user2.scout %></div>
+    <div class='compare-stat'>
+        <% if user1.scout > user2.scout %>
+            <-- <%= user1.scout - user2.scout %>
+        <% elsif user1.scout < user2.scout %>
+            <%= user2.scout - user1.scout %> -->
+        <% else %>
+            ===
+        <% end %>
+    </div>
     <div class='compare-stat'><%= user1.pulse %> - <%= user2.pulse %></div>
     <div class='compare-stat'><%= user1.hand %> - <%= user2.hand %></div>
     <div class='compare-stat'><%= user1.auto %> - <%= user2.auto %></div>
