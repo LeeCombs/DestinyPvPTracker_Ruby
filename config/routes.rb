@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   get '/character', to: 'characters#show'
 
+  get '/http', to: 'http#index'
+
   resources :characters
 end
