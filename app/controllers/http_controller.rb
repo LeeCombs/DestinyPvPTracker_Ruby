@@ -7,7 +7,7 @@ class HttpController < ApplicationController
       'https://www.bungie.net/Platform/Destiny/SearchDestinyPlayer/1/TheHereticRamza',
       verify: false,
       headers: {
-        "X-API-Key" => "APIKEYHERE"
+        "X-API-Key" => ENV['DESTINY_API_KEY']
       }
     )
     puts res
