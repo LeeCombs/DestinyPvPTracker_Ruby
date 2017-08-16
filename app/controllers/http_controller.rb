@@ -12,5 +12,9 @@ class HttpController < ApplicationController
     )
     puts res
     @resp = res
+
+    hashed = JSON.parse res.body
+    @hash = hashed
+    puts hashed["Response"][0]["membershipId"]
   end
 end
