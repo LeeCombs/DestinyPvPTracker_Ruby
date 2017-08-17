@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170812210702) do
+ActiveRecord::Schema.define(version: 20170817225935) do
 
   create_table "characters", force: :cascade do |t|
     t.string   "user_id"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 20170812210702) do
     t.integer  "shotgun",    default: 0
     t.integer  "fusion",     default: 0
     t.integer  "sidearm",    default: 0
+  end
+
+  create_table "destiny_players", force: :cascade do |t|
+    t.string   "membership_id"
+    t.integer  "membership_type"
+    t.string   "display_name"
+    t.string   "icon_path"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

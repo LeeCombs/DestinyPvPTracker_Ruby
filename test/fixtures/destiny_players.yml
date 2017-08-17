@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  membershipID: MyString
+  membershipType: 
+  displayName: MyString
+  iconPath: MyString
+
+two:
+  membershipID: MyString
+  membershipType: 
+  displayName: MyString
+  iconPath: MyString

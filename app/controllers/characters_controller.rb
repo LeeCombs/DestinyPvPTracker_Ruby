@@ -6,6 +6,7 @@ class CharactersController < ApplicationController
 
 
     res = SearchPlayerName(params[:displayName])
+    puts res
     hashed = JSON.parse res.body
     @hash = hashed
     @displayName = hashed["Response"][0]["displayName"]

@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   get '/character', to: 'characters#show'
 
+  resources :destiny_players
   resources :characters
 end
