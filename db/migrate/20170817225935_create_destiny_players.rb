@@ -1,7 +1,7 @@
 class CreateDestinyPlayers < ActiveRecord::Migration[5.0]
   def change
     create_table :destiny_players do |t|
-      t.string :membership_id
+      t.string :membership_id, unique: true
       t.integer :membership_type
       t.string :display_name
       t.string :icon_path
