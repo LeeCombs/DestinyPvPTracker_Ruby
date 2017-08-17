@@ -1,6 +1,12 @@
 <h1>Show Character</h1>
-<p>ID:          <%= @character.user_id %></p>
-<p>Scout Kills: <%= @character.scout %></p>
-<p>Hand Kills:  <%= @character.hand %></p>
-<p>Pulse Kills: <%= @character.pulse %></p>
-<p>Auto Kills:  <%= @character.auto %></p>
+
+<p>
+    DisplayName: <%= @displayName %>
+    <br/>
+    MembershipID: <%= @hash["Response"][0]["membershipId"] %>
+    <br/>
+    Membership Type: <%= @hash["Response"][0]["membershipType"] %>
+    <br/>
+    Icon Path: <%= @hash["Response"][0]["iconPath"] %>
+    <br/>
+</p>

@@ -12,8 +12,8 @@
         <span style="font-size:20px;">Search PvP Stats</span>
         <div class="player-search">
             <%= form_tag("/character", method: "get") do |f| %>
-                <%= label_tag :id, "Player:" %>
-                <%= text_field_tag :id %>
+                <%= label_tag :displayName, "Player:" %>
+                <%= text_field_tag :displayName %>
                 <br/>
                 <%= submit_tag "Search" %>
             <% end %>
