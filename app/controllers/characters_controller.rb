@@ -4,8 +4,8 @@ class CharactersController < ApplicationController
   def show
     # @character = Character.find(params[:id])
 
+
     res = SearchPlayerName(params[:displayName])
-    @resp = res
     hashed = JSON.parse res.body
     @hash = hashed
     @displayName = hashed["Response"][0]["displayName"]

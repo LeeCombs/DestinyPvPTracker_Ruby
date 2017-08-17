@@ -10,7 +10,7 @@ As this was created as a Ruby on Rails learning project, the aesthetics of the s
 
 ## Deploying locally or on Heroku
 
-Requires a Destiny API key to be set as an ENV var, or in a application.yml file as "DESTINY_API_KEY"
+Requires a Destiny API key to be set as an ENV var, or in application.yml, as "DESTINY_API_KEY"
 
 ## Example
 
