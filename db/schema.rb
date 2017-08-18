@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 20170817225935) do
   end
 
   create_table "destiny_players", force: :cascade do |t|
-    t.string   "membership_id"
+    t.string   "membership_id",   null: false
+    t.string   "display_name",    null: false
     t.integer  "membership_type"
-    t.string   "display_name"
     t.string   "icon_path"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false

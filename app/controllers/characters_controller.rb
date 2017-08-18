@@ -2,26 +2,29 @@ class CharactersController < ApplicationController
   include HttpHelper
   
   def show
-    # @character = Character.find(params[:id])
 
+    # Make the http requets to get player information
     res = SearchPlayerName(params[:displayName])
+    resBody = JSON.parse res.body
+
+    puts 'spn res'
     puts res
-    hashed = JSON.parse res.body
-    @hash = hashed
-    @displayName = hashed["Response"][0]["displayName"]
+    if res['Response'].blank?
+      return
+    end
+    puts 'res body'
+    puts resBody
 
-    @player = DestinyPlayer.find_by membership_id: hashed["Response"][0]["membershipId"]
-
+    # Grab or create the player's record
+    @player = DestinyPlayer.find_by membership_id: resBody["Response"][0]["membershipId"]
     if @player.nil?
-      puts 'Creating player...'
+      puts 'Creating player record for: ' + params[:displayName]
       @player = DestinyPlayer.new
-      @player.membership_id = hashed["Response"][0]["membershipId"]
-      @player.membership_type = hashed["Response"][0]["membershipType"]
-      @player.display_name = hashed["Response"][0]["displayName"]
-      @player.icon_path = hashed["Response"][0]["iconPath"]
+      @player.membership_id   = resBody["Response"][0]["membershipId"]
+      @player.membership_type = resBody["Response"][0]["membershipType"]
+      @player.display_name    = resBody["Response"][0]["displayName"]
+      @player.icon_path       = resBody["Response"][0]["iconPath"]
       @player.save
-    else
-      puts 'Player found'
     end
 
   end

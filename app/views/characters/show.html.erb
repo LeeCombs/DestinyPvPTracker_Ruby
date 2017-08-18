@@ -1,12 +1,15 @@
 <h1>Show Character</h1>
 
-<p>
-    DisplayName: <%= @displayName %>
-    <br/>
-    MembershipID: <%= @hash["Response"][0]["membershipId"] %>
-    <br/>
-    Membership Type: <%= @hash["Response"][0]["membershipType"] %>
-    <br/>
-    Icon Path: <%= @hash["Response"][0]["iconPath"] %>
-    <br/>
-</p>
+<% if not @player.nil? %>
+    <p>
+        DisplayName: <%= @player.display_name %>
+        <br/>
+        MembershipID: <%= @player.membership_id %>
+        <br/>
+        Membership Type: <%= @player.membership_type %>
+        <br/>
+        Icon Path: <%= @player.icon_path %>
+    </p>
+<% else %>
+    <p>Player not found</p>
+<% end %>
