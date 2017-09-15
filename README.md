@@ -10,7 +10,21 @@ As this was created as a Ruby on Rails learning project, the aesthetics of the s
 
 ## Deploying locally or on Heroku
 
-Requires a Destiny API key to be set as an ENV var, or in application.yml, as "DESTINY_API_KEY"
+Clone the repo to your folder
+
+Set a Destiny API key as an ENV var named "DESTINY_API_KEY"
+Or, in the config folder, create an 'application.yml' file and store the API key as DESTINY_API_KEY: "KEYHERE"
+
+Open cmd and run the following:
+```
+> bundle install
+> rails db:migrate
+> rails db:seed
+> rails s
+```
+
+Then go to localhost:3000 and test it out.
+
 
 ## Example
 

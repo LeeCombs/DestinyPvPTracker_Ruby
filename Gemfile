@@ -21,6 +21,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'httparty', '~> 0.15'
+gem 'coffee-script-source', '1.8.0'
 
 # For managing ENV
 gem 'figaro'
