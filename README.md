@@ -8,11 +8,12 @@ You can see it while it's developed here: https://dry-temple-50978.herokuapp.com
 
 As this was created as a Ruby on Rails learning project, the aesthetics of the site may be a tad rough.
 
-## Deploying locally or on Heroku
+## Deploying locally
 
-Clone the repo to your folder
+Clone the repo
 
 Set a Destiny API key as an ENV var named "DESTINY_API_KEY"
+
 Or, in the config folder, create an 'application.yml' file and store the API key as DESTINY_API_KEY: "KEYHERE"
 
 Open cmd and run the following:
